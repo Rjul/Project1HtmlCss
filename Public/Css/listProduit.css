@@ -1,0 +1,38 @@
+.ficheList{
+    width: 25%;  
+    height: 230px;
+    background-color: rgba(201, 201, 201, 0.295);
+    padding: 4px;
+    margin: 15px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.buttonFiche{
+    position: absolute;
+    width: 25%;
+    height: 230px;
+}
+.ficheList > span{
+    font-size: 20px;
+    margin: 2px;
+    margin-bottom: 6px;
+}
+.ficheList > img{
+    width: 100%;
+
+}
+.ficheList > div{
+    display: flex;
+    position: relative;
+    bottom: auto;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:flex-end;
+    margin: 3px;
+}
+.description{
+    font-size: 10px;
+   
+}

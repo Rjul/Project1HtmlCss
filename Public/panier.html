@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./Css/panier.css">
+</head>
+
+<body>
+    <div id='container'>
+        <header>
+            <h1 id='title'>Super Montre</h1>
+            <span id='authButton'>Connection / Inscription</span>
+        </header>
+        <section>
+            <H2>An incredible shopping cart.
+                You are amazing!</H2>
+            <article id='panier'>
+                <div class='ficheList'>
+                    <buttonx class='buttonFiche' id='1'></buttonx>
+                    <img src="./Asset/Montre 1.webp" alt="" />
+                    <div>
+                        <div>
+                            <span>Super Grolex</span>
+                            <span>8000$</span>
+                        </div>
+                        <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            maiores?</span>
+                    </div>
+                </div>
+                <div class='ficheList'>
+                    <buttonx class='buttonFiche' id='1'></buttonx>
+                    <img src="./Asset/Montre 1.webp" alt="" />
+                    <div>
+                        <div>
+                            <span>Super Grolex</span>
+                            <span>8000$</span>
+                        </div>
+                        <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            maiores?</span>
+
+                    </div>
+                </div>
+                <div id='payement'>
+                    <button id='buttonPayement'>PAYER</button>
+                    <article id='montant'>
+                        <span>Total HT : 18000 $</span>
+                        <span>TVA : 20 %</span>
+                        <span>Total TTC : 19600 $</span>
+                    </article>
+                </div>
+            </article>
+            <div>
+
+            </div>
+
+        </section>
+
+        <div id='detectorAuth'></div>
+        <section id='authForm'>
+            <div class='middleForm'>
+                <span>CONNECTION</span>
+                <form action="/">
+                    <input type="email" class='inputAuth' name="email" placeholder='EMAIL' autocomplete="username"
+                        id="emailConnection">
+                    <input type="password" class='inputAuth passwordInput' placeholder='PASSWORD'
+                        autocomplete="current-password" name="" id="passwordConnection">
+                    <input class='submitButton' type="submit" value="Soumettre">
+                </form>
+                <div class='separateurHorizontal'></div>
+                <div id='reseauxSociaux'>
+                    <img src="./Asset/reseauxSociaux/Google.png" alt="">
+                    <img src="./Asset/reseauxSociaux/Facebook.png" alt="">
+                </div>
+            </div>
+            <div class='separateurVertical'></div>
+            <div class='middleForm'>
+                <span>INSCRIPTION</span>
+                <form action="/">
+                    <input type="email" name="email" class='inputAuth' placeholder='EMAIL' autocomplete="username"
+                        id="emailInscription">
+                    <input type="password" placeholder='PASSWORD' class='inputAuth passwordInput'
+                        autocomplete="current-password" name="" id="passwordInscription">
+                    <input type="password" placeholder='PASSWORD' class='inputAuth passwordInput'
+                        autocomplete="current-password" name="" id="passwordInscriptionConfirme">
+                    <input class='submitButton' type="submit" value="Soumettre">
+                </form>
+
+            </div>
+        </section>
+
+    </div>
+
+</body>
+<script src="./JS/panier.js"></script>
+<script src='./JS/authInterface.js'></script>
+<script src='./JS/main.js'></script>
+
+</html>
