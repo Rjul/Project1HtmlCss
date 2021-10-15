@@ -27,32 +27,71 @@ detecteClickOutAuthElm.addEventListener('click', (e) => {
     stateDisplayAuth = stateDisplayAuthNone
 })
 
-//----------- Fonction swith type input -------------//
+//----------- Fonction swith tab connection / inscription -------------//
 
 // init variable 
 
-const passwordInputElms = document.getElementsByClassName('passwordInput')
+const tabSwitchElms = document.getElementsByClassName('tab-switch-mod')
+const inscriptionElm = document.getElementById('inscription-tab')
+const connectionElm = document.getElementById('connection-tab')
+var states = 'connection'
 
-// boucle ajout d'évent 
-for (var i = 0; i < passwordInputElms.length; i++) {
-    passwordInputElms[i].addEventListener('key', (e) => {
-        console.log(e.value)
-    })
+/// init
+
+
+// FUNCTION modification des styles
+
+function tabSwitchDisplay(rendu) {
+    for (var i = 0; i < tabSwitchElms.length; i++) {
+        tabSwitchElms[i].style.display = rendu
+        console.log(rendu)
+    }
+}
+
+function displayFullAuth() {
+    inscriptionElm.style.display = 'flex'
+    connectionElm.style.display = 'flex'
+    tabSwitchDisplay('none')
+}
+function switchAuthMod() {
+    if (states == "connection") {
+        inscriptionElm.style.display = 'flex'
+        connectionElm.style.display = 'none'
+        states = 'inscription'
+    } else if (states == "inscription") {
+        inscriptionElm.style.display = 'none'
+        connectionElm.style.display = 'flex'
+        states = 'connection'
+    }
 }
 
 
+// Ecoute de resize
+window.addEventListener('load', (e) => {
 
-/**
-function SwitchPass(){
- var typeInput = document.getElementById('mdp');
- var txtHREF = document.getElementById('AffPass');
- if(typeInput.type == 'password'){
-  typeInput.type = 'text';
-  txtHREF.innerHTML = 'Cacher le mot de passe';
- }
- else{
-  typeInput.type = 'password';
-  txtHREF.innerHTML = 'Afficher mot de passe';
- }
+})
+
+window.addEventListener('resize', (e) => {
+    console.log("resize")
+    if (e.target.innerWidth > 800) {
+        displayFullAuth()
+    }
+    else if (e.target.innerWidth < 800) {
+        tabSwitchDisplay('flex')
+        if (states == 'connection') {
+            inscriptionElm.style.display = 'none'
+        } else {
+            connectionElm.style.display = 'none'
+        }
+    }
+})
+
+// Ecoute des Elms de switch en tab mods
+
+
+for (var i = 0; i < tabSwitchElms.length; i++) {
+    tabSwitchElms[i].addEventListener('click', () => {
+        switchAuthMod()
+    }
+    )
 }
- */

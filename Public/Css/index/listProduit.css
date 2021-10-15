@@ -1,29 +1,34 @@
 .ficheList{
-    width: 25%;  
-    height: 230px;
+    transition: 300ms;
+    width: 31%;  
+    /* height: 230px; */
     background-color: rgba(201, 201, 201, 0.295);
     padding: 4px;
-    margin: 15px; 
+    margin: 5px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
 }
-.buttonFiche{
+.ficheList > a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+/* .buttonFiche{
     position: absolute;
     width: 25%;
     height: 230px;
-}
-.ficheList > span{
+} */
+.ficheList > a > span{
     font-size: 20px;
     margin: 2px;
     margin-bottom: 6px;
 }
-.ficheList > img{
+.ficheList > a > img{
     width: 100%;
 
 }
-.ficheList > div{
+.ficheList > a > div{
     display: flex;
     position: relative;
     bottom: auto;

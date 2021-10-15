@@ -6,8 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./Css/style.css">
-    <link rel="stylesheet" href="./Css/listProduit.css">
+    <link rel="stylesheet" media="all and (min-width: 800px)" href="./Css/style.css">
+    <link rel="stylesheet" media="all and (max-width: 800px)" href="./Css/style-media-tab.css">
+    <link rel="stylesheet" media="all and (min-width: 800px)" href="./Css/index/listProduit.css">
+    <link rel="stylesheet" media="all and (max-width: 800px) and (min-width: 600px)"
+        href="./Css//index/list-produit-tab.css">
+    <link rel="stylesheet" media="all and (max-width: 600px)" href="./Css/index/list-produit-phone.css">
+
 </head>
 
 <body>
@@ -21,76 +26,83 @@
         </div>
         <section>
             <div class='ficheList'>
-                <buttonx class='buttonFiche' id='1'></buttonx>
-                <img src="./Asset/Montre 1.webp" alt="" />
-                <span>Super Grolex</span>
-                <div>
-                    <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                        maiores?</span>
-                    <span>8000$</span>
-                </div>
+                <a href="./fiche-produit.html">
+                    <img src="./Asset/Montre 1.webp" alt="" />
+                    <span>Super Grolex</span>
+                    <div>
+                        <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            maiores?</span>
+                        <span>8000$</span>
+                    </div>
+                </a>
             </div>
 
             <div class='ficheList'>
-                <buttonx class='buttonFiche' id='2'></buttonx>
-                <img src="./Asset/Montre_2.webp" alt="" />
-                <span>Magnifique Cadran</span>
-                <div>
-                    <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                        maiores?</span>
-                    <span>8000$</span>
-                </div>
+                <a href="./fiche-produit.html">
+                    <img src="./Asset/Montre_2.webp" alt="" />
+                    <span>Magnifique Cadran</span>
+                    <div>
+                        <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            maiores?</span>
+                        <span>8000$</span>
+                    </div>
+                </a>
             </div>
 
             <div class='ficheList'>
-                <buttonx class='buttonFiche' id='3'></buttonx>
-                <img src="./Asset/Montre_3.webp" alt="" />
-                <span>Super montre en or !</span>
-                <div>
-                    <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                        maiores?</span>
-                    <span>8000$</span>
-                </div>
+                <a href="./fiche-produit.html">
+                    <img src="./Asset/Montre_3.webp" alt="" />
+                    <span>Super montre en or !</span>
+                    <div>
+                        <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            maiores?</span>
+                        <span>8000$</span>
+                    </div>
+                </a>
             </div>
 
             <div class='ficheList'>
-                <buttonx class='buttonFiche' id='4'></buttonx>
-                <img src="./Asset/Montre_4.webp" alt="" />
-                <span>Super montre en or !</span>
-                <div>
-                    <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                        maiores?</span>
-                    <span>8000$</span>
-                </div>
+                <a href="./fiche-produit.html">
+                    <img src="./Asset/Montre_4.webp" alt="" />
+                    <span>Super montre en or !</span>
+                    <div>
+                        <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            maiores?</span>
+                        <span>8000$</span>
+                    </div>
+                </a>
             </div>
 
             <div class='ficheList'>
-                <buttonx class='buttonFiche' id='5'></buttonx>
-                <img src="./Asset/Montre_5.jpg" alt="" />
-                <span>Super montre en or !</span>
-                <div>
-                    <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                        maiores?</span>
-                    <span>8000$</span>
-                </div>
+                <a href="./fiche-produit.html">
+                    <img src="./Asset/Montre_5.jpg" alt="" />
+                    <span>Super montre en or !</span>
+                    <div>
+                        <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            maiores?</span>
+                        <span>8000$</span>
+                    </div>
+                </a>
             </div>
 
             <div class='ficheList'>
-                <buttonx class='buttonFiche' id='6'></buttonx>
-                <img src="./Asset/Montre_6.webp" alt="" />
+                <a href="./fiche-produit.html">
+                    <img src="./Asset/Montre_6.webp" alt="" />
 
-                <span>Super montre en or !</span>
-                <div>
-                    <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                        maiores?</span>
-                    <span>8000$</span>
-                </div>
+                    <span>Super montre en or !</span>
+                    <div>
+                        <span class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                            maiores?</span>
+                        <span>8000$</span>
+                    </div>
+                </a>
             </div>
         </section>
         <div id='detectorAuth'></div>
         <section id='authForm'>
-            <div class='middleForm'>
-                <span>CONNECTION</span>
+            <div class='middleForm' id='connection-tab'>
+                <span class='tab-switch-mod'>Je n'est pas de compte</span>
+                <h3>CONNECTION</h3>
                 <form action="/">
                     <input type="email" class='inputAuth' name="email" placeholder='EMAIL' autocomplete="username"
                         id="emailConnection">
@@ -105,8 +117,9 @@
                 </div>
             </div>
             <div class='separateurVertical'></div>
-            <div class='middleForm'>
-                <span>INSCRIPTION</span>
+            <div class='middleForm' id='inscription-tab'>
+                <span class='tab-switch-mod'>J'ai un compte, je souhaite me connecté</span>
+                <h3>INSCRIPTION</h3>
                 <form action="/">
                     <input type="email" name="email" class='inputAuth' placeholder='EMAIL' autocomplete="username"
                         id="emailInscription">

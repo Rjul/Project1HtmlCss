@@ -1,0 +1,54 @@
+#panier{
+    width: 90%;
+    align-items: center;
+}
+.ficheList{
+    width: 60% ;  
+    background-color: rgba(201, 201, 201, 0.253);
+    padding: 4px;
+    margin: 15px; 
+    display: flex;
+    
+}
+
+.ficheList > img{
+    width: 240px;
+    height: 150px;
+
+}
+.ficheList > div{
+    display: flex;
+    bottom: auto;
+    flex-direction: column;
+    margin: 3px;
+}
+.ficheList > div > div{
+    display : flex;
+    flex-direction: row ;
+    justify-content: space-around;
+}
+.description{
+    font-size: 10px;
+    margin: 5px;
+    padding-top: 10px;
+}
+#payement{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#payement > button{
+    height: 50px;
+    width: 150px;
+    margin-right: 70px;
+    background-color: rgba(96, 180, 12, 0.952);
+}
+#montant{
+    display : flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(224, 224, 224);
+    
+}
