@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" media="all and (min-width: 800px)" href=" ./Css/style.css">
-    <link rel="stylesheet" media="all and (min-width: 700px)" href=" ./Css/panier/panier.css">
-    <link rel="stylesheet" media="all and (max-width: 800px)" href="./Css/style-media-tab.css">
-    <link rel="stylesheet" media="all and (max-width: 700px)" href="./Css/panier/panier-tab-phone.css">
+    <link rel="stylesheet" media="all and (min-width: 800px)" href=" ./css/style.css">
+    <link rel="stylesheet" media="all and (min-width: 700px)" href=" ./css/panier/panier.css">
+    <link rel="stylesheet" media="all and (max-width: 800px)" href="./css/style-media-tab.css">
+    <link rel="stylesheet" media="all and (max-width: 700px)" href="./css/panier/panier-tab-phone.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             <article id='panier'>
                 <div class='ficheList'>
                     <buttonx class='buttonFiche' id='1'></buttonx>
-                    <img src="./Asset/Montre 1.webp" alt="" />
+                    <img src="./asset/Montre 1.webp" alt="" />
                     <div>
                         <div>
                             <span>Super Grolex</span>
@@ -36,7 +36,7 @@
                 </div>
                 <div class='ficheList'>
                     <buttonx class='buttonFiche' id='1'></buttonx>
-                    <img src="./Asset/Montre 1.webp" alt="" />
+                    <img src="./asset/Montre 1.webp" alt="" />
                     <div>
                         <div>
                             <span>Super Grolex</span>
@@ -48,11 +48,11 @@
                     </div>
                 </div>
                 <div id='payement'>
-                    <button id='buttonPayement'>PAYER</button>
+                    <button class='btnClassShip' id='buttonPayement'>PAYER</button>
                     <article id='montant'>
-                        <span>Total HT : 18000 $</span>
+                        <span>HT : 18000 $</span>
                         <span>TVA : 20 %</span>
-                        <span>Total TTC : 19600 $</span>
+                        <span>Total : 19600 $</span>
                     </article>
                 </div>
             </article>
@@ -61,13 +61,24 @@
             </div>
 
         </section>
-
+        <div id='detectorShiping'></div>
+        <section id='shipingForm'>
+            <form action="" method="get">
+                <input type="text" name="" id="cardNumber" placeholder='Your card number !' class='inputShiping'>
+                <div>
+                    <input type="month" value="2021-10" min="2021-10" step='1' name="" id="expireDate"
+                        class='inputShiping'>
+                    <input type="number" name="" id="ccv" placeholder='CCV' class='inputShiping'>
+                </div>
+                <button type="submit" class='btnClassShip' id='btnIdShip'>PAYER</button>
+            </form>
+        </section>
         <div id='detectorAuth'></div>
         <section id='authForm'>
             <div class='middleForm' id='connection-tab'>
                 <span class='tab-switch-mod'>Je n'est pas de compte</span>
                 <h3>CONNECTION</h3>
-                <form action="/">
+                <form action="./dashboard.html">
                     <input type="email" class='inputAuth' name="email" placeholder='EMAIL' autocomplete="username"
                         id="emailConnection">
                     <input type="password" class='inputAuth passwordInput' placeholder='PASSWORD'
@@ -76,15 +87,15 @@
                 </form>
                 <div class='separateurHorizontal'></div>
                 <div id='reseauxSociaux'>
-                    <img src="./Asset/reseauxSociaux/Google.png" alt="">
-                    <img src="./Asset/reseauxSociaux/Facebook.png" alt="">
+                    <img src="./asset/reseauxSociaux/Google.png" alt="">
+                    <img src="./asset/reseauxSociaux/Facebook.png" alt="">
                 </div>
             </div>
             <div class='separateurVertical'></div>
             <div class='middleForm' id='inscription-tab'>
                 <span class='tab-switch-mod'>J'ai un compte, je souhaite me connecté</span>
                 <h3>INSCRIPTION</h3>
-                <form action="/">
+                <form action="./dashboard.html">
                     <input type="email" name="email" class='inputAuth' placeholder='EMAIL' autocomplete="username"
                         id="emailInscription">
                     <input type="password" placeholder='PASSWORD' class='inputAuth passwordInput'
@@ -100,8 +111,8 @@
     </div>
 
 </body>
-<script src="./JS/panier.js"></script>
-<script src='./JS/authInterface.js'></script>
-<script src='./JS/main.js'></script>
+<script src="./js/panier.js"></script>
+<script src='./js/authInterface.js'></script>
+<script src='./js/main.js'></script>
 
 </html>

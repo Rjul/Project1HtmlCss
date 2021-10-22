@@ -4,6 +4,7 @@
 const displayFromAuthElm = document.getElementById('authForm')
 const displayFromAuthButtonElm = document.getElementById('authButton')
 const detecteClickOutAuthElm = document.getElementById('detectorAuth')
+
 // init states
 var stateDisplayAuth = "none"
 const stateDisplayAuthNone = "none"
@@ -66,7 +67,8 @@ function switchAuthMod() {
 }
 
 
-// Ecoute de resize
+//------- Ecoute et gestion de resize --------//
+
 window.addEventListener('load', (e) => {
 
 })
