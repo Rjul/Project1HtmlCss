@@ -16,7 +16,6 @@ include './elms-pages/base.php';
         </div>
     </a>
 </div>
-
 <div class='ficheList'>
     <a href="./fiche-produit.php">
         <img src="./asset/Montre_2.webp" alt="" />
@@ -28,7 +27,6 @@ include './elms-pages/base.php';
         </div>
     </a>
 </div>
-
 <div class='ficheList'>
     <a href="./fiche-produit.php">
         <img src="./asset/Montre_3.webp" alt="" />

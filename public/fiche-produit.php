@@ -23,7 +23,5 @@ include './elms-pages/base.php';
             corporis iure deleniti qui numquam nihil a iusto. Necessitatibus, aliquam nisi! Obcaecati,
             quas?</p>
     </span>
-
-
 </div>
 <?php include './elms-pages/footer.php' ?>
