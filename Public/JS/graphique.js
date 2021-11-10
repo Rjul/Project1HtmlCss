@@ -37,23 +37,44 @@ const config = {
         plugins: {
             title: {
                 display: true,
-                text: "Transformation visite"
+                text: "Transformation visite",
+                font: {
+                    size: 25
+                }
             },
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    font: {
+                        size: 25
+                    }
+                }
+            }
         },
         responsive: true,
         maintainAspectRatio: false, // peut changer le ratio
         scales: {
+
             x: {
                 stacked: true,
+                ticks: {
+                    font: {
+                        size: 25,
+                    }
+                }
             },
             y: {
-                stacked: true
+                stacked: true,
+                ticks: {
+                    font: {
+                        size: 25,
+                    }
+                }
             }
         }
     },
 }
 const mainGraf = document.getElementById('transformationVente').getContext('2d');
-console.log('ooooooooo')
 var grafMain = new Chart(mainGraf, config);
 
 const dataChifreAffaire = {
@@ -74,8 +95,19 @@ const configChiffreAffaire = {
         plugins: {
             title: {
                 display: true,
-                text: "Chiffre d'affaire"
+                text: "Chiffre d'affaire",
+                font: {
+                    size: 25
+                }
             },
+            legend: {
+                labels: {
+                    // This more specific font property overrides the global property
+                    font: {
+                        size: 25
+                    }
+                }
+            }
         },
         interaction: {
             intersect: false,
@@ -86,21 +118,30 @@ const configChiffreAffaire = {
                 display: true,
                 title: {
                     display: true
+                },
+                ticks: {
+                    font: {
+                        size: 25,
+                    }
                 }
             },
             y: {
                 display: true,
                 title: {
                     display: true,
-                    text: 'Value'
+                    text: 'Euro'
                 },
-                suggestedMin: -10,
-                suggestedMax: 200
+                ticks: {
+                    font: {
+                        size: 25,
+                    }
+                },
+                suggestedMin: 200000,
+                suggestedMax: 1200000
             }
         }
     },
 };
 
 const chiffreAffaireGraf = document.getElementById('chiffreAffaire').getContext('2d');
-console.log('ooooooooo')
 var grafChiffreAffaire = new Chart(chiffreAffaireGraf, configChiffreAffaire);

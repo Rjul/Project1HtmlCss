@@ -3,5 +3,5 @@
 ///  Gestion header ( link home )
 // init variable 
 document.getElementById('title').addEventListener('click', () => {
-    window.location = '../Public/index.html'
+    window.location = '../Public/index.php'
 })

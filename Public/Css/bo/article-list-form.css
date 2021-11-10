@@ -1,0 +1,103 @@
+.container-form-produit{
+    position: fixed;
+    display: none ;
+    top: calc(50vh - 175px);
+    left: calc(50vw - 325px);
+    background-color: rgb(224, 224, 224);
+    height: 350px;
+    width: 650px;
+    padding: 10px;
+    /* overflow: hidden; */
+}.form-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-child-container{
+    background-color: rgba(0, 0, 0, 0.103);
+    padding: 5px;
+    margin: 5px;
+}
+.input-standart{
+    border-radius: 5px;
+    /* border: rgb(80, 79, 79) 3px solid; */
+    background-color: rgb(233, 232, 231);
+}
+.input-standart:invalid{
+    border: rgba(252, 0, 0, 0.74) 3px solid;
+}
+.input-standart:valid{
+    border: rgba(0, 252, 21, 0.74) 3px solid;
+}
+.input-area{
+    width: 100%;
+    resize: none;
+}
+.input-produit{
+    height: 20px;
+    /* width: 100px; */
+}
+.img-form{
+    width: 260px;
+}
+.btn-container{
+    position: relative;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: rgba(255, 235, 205, 0.281);
+    transition: 500ms;
+}
+.btn:hover{
+    width: 95px;
+    height: 35px;
+    border-radius: 9px;
+    padding: 6px;
+    background-color: rgba(250, 214, 161, 0.281);
+}
+.is-success{
+    background-color: rgb(185, 253, 116);
+}
+.is-danger{
+    background-color: rgb(255, 87, 121);
+}
+.is-success:hover{
+    background-color: rgb(143, 248, 37);
+}
+.is-danger:hover{
+    background-color: rgb(255, 9, 58);
+}
+
+
+@media all and (min-width: 700px) {
+    .btn-container{
+        left: calc(650px / 2 - 100px);  
+    }   
+}
+@media all and (max-width: 700px) {
+    .container-form-produit{
+        position: fixed;
+        display: none ;
+        top: calc(50vh - 280px);
+        left: calc(50vw - 150px);
+        background-color: rgb(224, 224, 224);
+        height: 600px;
+        width: 300px;
+    }
+    .btn-container{
+        position: relative;
+        width: 180px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .form-row{
+        display: flex;
+        flex-direction: column;
+    }
+}
