@@ -2,7 +2,7 @@
   <div class="ficheList">
     <router-link :to="`/product/${product.id}`">
       <img :src="`${publicPath}${product.imageUrl}`" alt="" />
-      <span>{{ product.name }}</span>
+      <span>{{ product.title }}</span>
       <div>
         <span class="description">{{ product.description }}</span>
         <span>{{ product.price }}$</span>

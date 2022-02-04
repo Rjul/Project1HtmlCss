@@ -23,13 +23,16 @@ export default {
   },
   // Get data for render
   data: function () {
-    // @Todos then route created and deliveries available
-    let productsSource = require("@/assets/json/list-products.json");
-
-    let products = productsSource;
+    let products = this.$store.state.products;
     return {
       products,
     };
+  },
+  computed: {
+    productsStore: () => {
+      console.log(this.$store.state);
+      return this.$store.getters.products;
+    },
   },
 };
 </script>
