@@ -1,0 +1,68 @@
+[
+    {
+        "id": "012345",
+        "name": "Super Grolex",
+        "breadcrumb": "super-grolex",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores?",
+        "imageUrl": "./assets/Montre_2.webp",
+        "imageMeta": "belle SuperGrolex",
+        "price": "7999",
+        "quantity": "1",
+        "url": "./fiche-produit.php"
+    },
+    {
+        "id": "012345",
+        "name": "Grolex",
+        "breadcrumb": "grolex",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores?",
+        "imageUrl": "./assets/Montre_1.webp",
+        "imageMeta": "Grolex",
+        "price": "7999",
+        "quantity": "1",
+        "url": "./fiche-produit.php"
+    },
+    {
+        "id": "012345",
+        "name": "Montrex",
+        "breadcrumb": "montrex",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores?",
+        "imageUrl": "./assets/Montre_3.webp",
+        "imageMeta": "belle Montrex",
+        "price": "7999",
+        "quantity": "1",
+        "url": "./fiche-produit.php"
+    },
+    {
+        "id": "012345",
+        "name": "Cadrax delux",
+        "breadcrumb": "cadrax-delux",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores?",
+        "imageUrl": "./assets/Montre_4.webp",
+        "imageMeta": "belle Cadrax delux",
+        "price": "7999",
+        "quantity": "1",
+        "url": "./fiche-produit.php"
+    },
+    {
+        "id": "012345",
+        "name": "L'olivier",
+        "breadcrumb": "l-olivier",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores?",
+        "imageUrl": "./assets/Montre_5.jpg",
+        "imageMeta": "belle l'ovilier",
+        "price": "7999",
+        "quantity": "1",
+        "url": "./fiche-produit.php"
+    },
+    {
+        "id": "012345",
+        "name": "Grolex 2",
+        "breadcrumb": "grolex-2",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores?",
+        "imageUrl": "./assets/Montre_6.webp",
+        "imageMeta": "belle Grolex 2",
+        "price": "7999",
+        "quantity": "1",
+        "url": "./fiche-produit.php"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id": "012345",
+        "name": "Super Grolex",
+        "breadcrumb": "super-grolex",
+        "description": "La montre gros poignet suisse.",
+        "imageUrl": "./assets/Montre_2.webp",
+        "imageMeta": "belle SuperGrolex",
+        "basePrice": 7999,
+        "quantity": 1
+    },
+    {
+        "id": "012346",
+        "name": "Cartier de pomme",
+        "breadcrumb": "grolex",
+        "description": "La montre de ceux qui ne peuvent sans payer une entiere",
+        "imageUrl": "./assets/Montre_1.webp",
+        "imageMeta": "belle Grolex",
+        "basePrice": 7999,
+        "quantity": 1
+    }
+]

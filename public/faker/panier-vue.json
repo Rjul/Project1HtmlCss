@@ -1,0 +1,22 @@
+[
+    {
+        "id": "012345",
+        "name": "Super Grolex",
+        "breadcrumb": "super-grolex",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores?",
+        "imageUrl": "@/assets/Montre_2.webp",
+        "imageMeta": "belle SuperGrolex",
+        "price": "7999",
+        "quantity": "1"
+    },
+    {
+        "ref": "012346",
+        "nom": "Grolex",
+        "breadcrumb": "grolex",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores?",
+        "imageUrl": "@/assets/Montre 1.webp",
+        "imageMeta": "belle Grolex",
+        "price": "7999",
+        "quantity": "1"
+    }
+]

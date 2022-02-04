@@ -14,14 +14,12 @@ displayFromAuthElm.style.display = "none"
 // Fonction de de display switch
 
 displayFromAuthButtonElm.addEventListener('click', (e) => {
-    console.log("Auth vue")
     displayFromAuthElm.style.display = stateDisplayAuthFixe
     detecteClickOutAuthElm.style.display = stateDisplayAuthFixe
     e.stopPropagation()
     stateDisplayAuth = stateDisplayAuthFixe
 })
 detecteClickOutAuthElm.addEventListener('click', (e) => {
-    console.log('Hide Auth')
     e.stopPropagation()
     displayFromAuthElm.style.display = stateDisplayAuthNone
     detecteClickOutAuthElm.style.display = stateDisplayAuthNone
@@ -45,7 +43,6 @@ var states = 'connection'
 function tabSwitchDisplay(rendu) {
     for (var i = 0; i < tabSwitchElms.length; i++) {
         tabSwitchElms[i].style.display = rendu
-        console.log(rendu)
     }
 }
 
@@ -74,7 +71,6 @@ window.addEventListener('load', (e) => {
 })
 
 window.addEventListener('resize', (e) => {
-    console.log("resize")
     if (e.target.innerWidth > 800) {
         displayFullAuth()
     }

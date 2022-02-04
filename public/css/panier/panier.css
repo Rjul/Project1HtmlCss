@@ -4,11 +4,11 @@
 }
 .ficheList{
     width: 60% ;  
+    min-width: 500px;
     background-color: rgba(201, 201, 201, 0.253);
     padding: 4px;
     margin: 15px; 
     display: flex;
-    
 }
 
 .ficheList > img{
@@ -17,20 +17,128 @@
 
 }
 .ficheList > div{
+    width: 100%;
     display: flex;
     bottom: auto;
     flex-direction: column;
     margin: 3px;
+    position: relative;
 }
 .ficheList > div > div{
+    max-width: 200px;
     display : flex;
     flex-direction: row ;
     justify-content: space-around;
+    font-size: 20px;
 }
 .description{
-    font-size: 10px;
+    font-size: 15px;
     margin: 5px;
     padding-top: 10px;
+}
+.quantity-container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.btn-container{
+    text-align: end;
+}
+.btn-quantity{
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+.input-quantity{
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    text-align: center;
+
+}
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.delete-container{
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+}
+.btn-delete-this{
+    padding: 3px;
+    border-radius: 3px; ;
+    height: 20px;
+    border-radius: 3px;
+}
+.delivery{
+    justify-content: space-between;
+    align-content: space-between;
+    margin: auto;
+    background-color: rgba(201, 201, 201, 0.253);
+    padding: 4px;
+    margin: 15px; 
+    display: inline-block;
+    text-align:center;
+    width: 60%;
+    min-width: 500px;
+    background-color: rgba(201, 201, 201, 0.253);
+    padding: 4px;
+    margin: 15px; 
+    display: flex;
+}
+.btn-delivery{
+    height: 25px;
+    padding: 5px;;
+    border-radius: 4px;
+}
+.btn-this-selected{
+    background-color: rgba(96, 180, 12, 0.952);
+}
+.form-shiping{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    min-width: 550px;
+    margin: auto;
+    background-color: rgba(201, 201, 201, 0.253);
+    padding: 4px;
+    margin: 15px; 
+    text-align:center;
+}
+.input-form-shiping{
+    text-align: center;
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.349);
+}
+.input-form-shiping::-webkit-input-placeholder {
+    color: slategray;
+}
+.input-form-shiping:-moz-placeholder {
+    color: slategray;
+}
+.input-form-shiping:invalid{
+    border:rgb(201, 66, 43) 2px solid;
+    background-color: rgba(128, 128, 128, 0.575);
+}
+.input-form-shiping:valid{
+    border:rgb(32, 172, 44) 2px solid;
+    background-color: rgba(101, 160, 54, 0.349);
+}
+
+.input-form-shiping::-webkit-input-placeholder {
+    color: slategray;
+}
+.input-form-shiping:-moz-placeholder {
+    color: slategray;
 }
 #payement{
     display: flex;
@@ -56,5 +164,4 @@
     width: 200px;
     height: 100px;
     background-color: rgb(224, 224, 224);
-    
 }

@@ -1,0 +1,24 @@
+{
+    "produits": {
+        "1": {
+            "ref": "012345",
+            "nom": "Super Grolex",
+            "breadcrumb": "super-grolex",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores?",
+            "imageUrl": "./asset/Montre_2.webp",
+            "imageMeta": "belle SuperGrolex",
+            "price": "7999",
+            "quantity": "1"
+        },
+        "2": {
+            "ref": "012345",
+            "nom": "Grolex",
+            "breadcrumb": "grolex",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores?",
+            "imageUrl": "./asset/Montre 1.webp",
+            "imageMeta": "belle Grolex",
+            "price": "7999",
+            "quantity": "1"
+        }
+    }
+}
