@@ -12,8 +12,18 @@
 <script>
 // Import component
 import ListAppCard from "./ListAppCard.vue";
+import { computed } from "vue";
+import { useStore } from "vuex";
 
 export default {
+  setup() {
+    const store = useStore();
+    const products = computed(() => store.state.products.productsStored);
+    store.dispatch("products/getAllProducts");
+    return {
+      products,
+    };
+  },
   components: {
     ListAppCard,
   },
@@ -22,18 +32,6 @@ export default {
     title: String,
   },
   // Get data for render
-  data: function () {
-    let products = this.$store.state.products;
-    return {
-      products,
-    };
-  },
-  computed: {
-    productsStore: () => {
-      console.log(this.$store.state);
-      return this.$store.getters.products;
-    },
-  },
 };
 </script>
 

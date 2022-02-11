@@ -3,16 +3,16 @@
     <div v-if="states !== 2">
       <h2>An incredible shopping cart. You are amazing!</h2>
       <!-- Product panier Component V-FOR Products and bind the data -----  Listener for quatity editing events -->
-      <div>
+      <div :v-if="products != undefined || products != null">
         <ProductPanier
           v-for="product in products"
           :key="product.id"
+          :id="product.id"
           :name="product.name"
           :description="product.description"
-          :basePrice="product.basePrice"
-          :quantity="product.quantity"
+          :price="product.price"
+          :quatityCart="product.quatityCart"
           :imageUrl="product.imageUrl"
-          @quantity="product.quantity = $event"
         >
         </ProductPanier>
 
@@ -96,10 +96,6 @@
         </button>
         <article id="montant">
           <span
-            ><span>{{ totalProductsPrice }}</span
-            ><span> €</span></span
-          >
-          <span
             ><span>Livraison : {{ priceDelivery }}</span
             ><span> €</span></span
           >
@@ -123,6 +119,7 @@
 // Import component
 import ProductPanier from "./ProductPanier.vue";
 import DeliveryAvailable from "./DeliveryAvailable.vue";
+// import { useStore } from "vuex";
 
 export default {
   components: {
@@ -135,12 +132,7 @@ export default {
   },
   // Get data for render
   data: function () {
-    // @Todos then route created and deliveries available
-    let productsSource = require("@/assets/json/panier-vue.json");
-
-    let products = productsSource;
     return {
-      products,
       states: 0,
       deliveriesType: [
         {
@@ -164,6 +156,11 @@ export default {
   },
   // Computed Panier data for user
   computed: {
+    products: {
+      get: function () {
+        return this.$store.state.cart.items;
+      },
+    },
     displayTextButton: {
       get: function () {
         let displayTextButton;
@@ -176,36 +173,13 @@ export default {
         return displayTextButton;
       },
     },
-    totalQuantity: {
-      get: function () {
-        let totalQuantity = 0;
-        Array.from(this.products).forEach((product) => {
-          totalQuantity += parseInt(product.quantity);
-        });
-        return totalQuantity;
-      },
-    },
-    totalBasePrice: {
-      get: function () {
-        let totalBasePrice = 0;
-        this.products.forEach((product) => {
-          totalBasePrice += parseInt(product.basePrice);
-        });
-        return totalBasePrice;
-      },
-    },
-    totalProductsPrice: {
-      // getter
-      get: function () {
-        return this.totalBasePrice * this.totalQuantity;
-      },
-    },
     totalPrice: {
       get: function () {
-        return this.totalProductsPrice + this.priceDelivery;
+        return this.$store.state.cartTotalPrice;
       },
     },
   },
+
   methods: {
     mainDeliveryProcesing: function (target, value) {
       this.deliveriesType.forEach((delivery) => {

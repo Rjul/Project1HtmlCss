@@ -1,16 +1,15 @@
 <template>
-  <div class="ficheList">
+  <div class="ficheList" :v-if="dataMounted != false || product != undefined">
     <div id="ficheRow1">
-      <img :src="`${publicPath}${product.imageUrl}`" alt="montre" />
+      <img :src="`${product.imageUrl}`" alt="montre" />
       <div id="ficheColumn">
         <span>
           <h3>{{ product.name }}</h3>
         </span>
         <span
           >{{ product.price }}$
-          <form action="./panier.php" method="get">
-            <button>Ajouter au panier</button>
-          </form>
+
+          <button @click="addProductToCart(product)">Ajouter au panier</button>
         </span>
       </div>
     </div>
@@ -24,25 +23,46 @@
 
 <script>
 // @ is an alias to /src
-
+// import { computed } from "vue";
+import { useStore } from "vuex";
+import { useRoute } from "vue-router";
 export default {
-  name: "Product",
-  data: () => {
+  setup() {
+    const store = useStore();
+    store.dispatch("products/getAllProducts");
+    const route = useRoute();
+    console.log(route.params.id);
+    store.dispatch("products/defineIdToView", route.params.id);
+    const addProductToCart = (product) =>
+      store.dispatch("cart/addProductToCart", product);
+
     return {
-      product: {
-        ref: "012345",
-        nom: "Super Grolex",
-        breadcrumb: "super-grolex",
-        description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores?",
-        imageUrl: "./assets/Montre_2.webp",
-        imageMeta: "belle SuperGrolex",
-        price: "7999",
-        quantity: "1",
-        url: "./fiche-produit.php",
-      },
-      publicPath: process.env.BASE_URL,
+      addProductToCart,
     };
+  },
+  name: "Product",
+
+  computed: {
+    product() {
+      return this.$store.state.products.product;
+    },
+    dataMounted() {
+      return this.$store.state.products.dataMounted;
+    },
+  },
+  watch: {
+    product: {
+      // Watch change for product and verify the newValue is available
+      handler(newValue, oldValue) {
+        console.log(newValue, " ", oldValue);
+        if ((newValue != "undefined") & newValue & (newValue != null)) {
+          console.log("here in if controle state for data");
+          this.$store.dispatch("products/defineDataMounted", true);
+        }
+      },
+      deep: true,
+      immediate: true,
+    },
   },
 };
 </script>

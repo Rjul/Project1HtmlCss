@@ -14,7 +14,18 @@
   </div>
 </template>
 <script>
+export default {
+  name: "App",
+  props: {
+    title: String,
+  },
+  data: () => {
+    let notDownloaded = false;
+    return notDownloaded;
+  },
+};
 </script>
+
 
 <style>
 #app {

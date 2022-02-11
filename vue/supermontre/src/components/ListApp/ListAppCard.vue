@@ -1,7 +1,7 @@
 <template>
   <div class="ficheList">
     <router-link :to="`/product/${product.id}`">
-      <img :src="`${publicPath}${product.imageUrl}`" alt="" />
+      <img :src="`${product.imageUrl}`" alt="" />
       <span>{{ product.title }}</span>
       <div>
         <span class="description">{{ product.description }}</span>
@@ -12,7 +12,18 @@
 </template>
 
 <script>
+import { useStore } from "vuex";
+
 export default {
+  setup() {
+    const store = useStore();
+    const addProductToCart = (product) =>
+      store.dispatch("cart/addProductToCart", product);
+
+    return {
+      addProductToCart,
+    };
+  },
   name: "ListAppCard",
   props: {
     product: Object,

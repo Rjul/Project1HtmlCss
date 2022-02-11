@@ -1,10 +1,10 @@
 <template>
   <div data-target="SuperGrolex" class="ficheList">
-    <img :src="`${publicPath}${imageUrl}`" alt="" />
+    <img :src="`${imageUrl}`" alt="" />
     <div>
       <div>
         <span>{{ name }}</span>
-        <span>{{ basePrice }}$</span>
+        <span>{{ price }}$</span>
       </div>
       <span class="description">{{ description }} </span>
       <span class="delete-container"> Supprimer </span>
@@ -12,8 +12,8 @@
         <div class="btn-container">
           <button @click="changeQuantity(-1)">-</button>
           <input
-            :value="quantity"
-            @input="$emit('quantity', $event.target.value)"
+            :value="this.qty"
+            @input="changeQuantityRow($event.target.value)"
           />
           <button @click="changeQuantity(+1)">+</button>
         </div>
@@ -27,24 +27,45 @@
 export default {
   name: "ProductPanier",
   props: {
+    id: Number,
     name: String,
     description: String,
-    basePrice: Number,
-    quantity: Number,
+    price: Number,
+    quatityCart: Number,
     imageUrl: String,
   },
   data() {
     return {
-      publicPath: process.env.BASE_URL,
-      qty: this.quantity,
+      qty: this.quatityCart,
     };
+  },
+  watch: {
+    quatityCart: {
+      handler(newValue) {
+        this.qty = newValue;
+      },
+    },
   },
 
   methods: {
-    changeQuantity: function (increment) {
+    changeQuantity: function (value) {
       if (this.qty > 0) {
-        this.qty += parseInt(increment);
-        this.$emit("quantity", this.qty);
+        this.qty += value;
+        this.$store.dispatch("cart/changeQuantity", {
+          id: this.id,
+          quatityCart: this.qty,
+          type: "math",
+        });
+      }
+    },
+    changeQuantityRow: function (value) {
+      if (this.qty > 0) {
+        this.qty = value;
+        this.$store.dispatch("cart/changeQuantity", {
+          id: this.id,
+          quatityCart: this.qty,
+          type: "row",
+        });
       }
     },
   },
@@ -59,7 +80,7 @@ export default {
     totalQuantity: {
       // getter
       get: function () {
-        return this.qty * this.basePrice;
+        return this.qty * this.price;
       },
     },
   },
