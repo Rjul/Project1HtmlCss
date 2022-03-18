@@ -6,11 +6,17 @@ const state = {
 
 // getters
 const getters = {
-
-    cartTotalPrice: (state) => {
+    productTotalPrice: (state) => {
         let total;
         state.items.forEach(product => {
             total = + (product.price * product.quatityCart)
+        });
+        return total;
+    },
+    cartTotalPrice: (getters) => {
+        let total;
+        getters.productTotalPrice.forEach(price => {
+            total += price
         });
         return total;
     }

@@ -1,6 +1,6 @@
 <template>
   <div class="ficheList">
-    <router-link :to="`/product/${product.id}`">
+    <router-link :to="{ name: 'Product', params: { id: product.id } }">
       <img :src="`${product.imageUrl}`" alt="" />
       <span>{{ product.title }}</span>
       <div>
@@ -73,7 +73,7 @@ export default {
 .description {
   font-size: 10px;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 800px) and (min-width: 600px) {
   .ficheList {
     transition: 500ms;
     width: 45%;

@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    margin: auto;
+}
+#container{
+    height: 100%;
+    margin: auto;
+    background-color: rgba(230, 230, 230, 0.384);
+    
+}
+/*#region Header */
+
+header{
+    height: 10vh;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/*#region BtnHome  */
+.magical-link{
+    position: relative;
+    margin-left: 30px;
+    padding: 15px;
+    transition: 500ms;
+    border-radius: 15px;
+}
+.magical-link:hover{
+    animation: 1s linear 0s infinite magical-anim;
+}
+/*#endregion  */
+.string{
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 5px;   
+}
+.c-right{
+    top: -7vh;
+    right: 0;
+    transform: rotate(40deg);
+}
+.c-left{
+    top: -7vh;
+    left: 0;
+    transform: rotate(-40deg);
+}
+#hero-container{
+    height: 200px;
+    width: 100%;
+    border-radius: 40px;
+    margin: 20px 0px 20px 0px;
+    overflow: hidden;
+}
+#hero{
+    height: 100%;
+    width: 100%;
+    background-image: url("../assets/hero.png");
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 100%;
+    transition: 1s;
+}
+#hero:hover{
+    transition: 1s;
+    animation: 5s ease-in-out 0s infinite hero-anim;
+}
+#title{
+    height: 100%;
+    font-size: 40px;
+    align-items: center;
+    display: flex;
+    color: rgb(201, 123, 67);
+
+}
+.nav-link{
+    padding: 3px;
+    font-size: 2vw;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(201, 200, 200, 0.418);
+    margin-right: 5px;
+    color: sienna;
+}
+.router-link-active{
+    color: rgb(172, 71, 40);
+    border: 2px solid rgba(204, 161, 161, 0.418);
+}
+#authButton{
+
+}
+
+/* #endregion */
+
+section{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    margin: auto;
+    padding-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color:rgb(117, 95, 68)
+    
+}
+
+/*-------  #Region Animation -------*/
+
+
+@keyframes magical-anim { 
+    0%{
+        transform: rotate(0deg) translate(0px);
+    }
+    25%{
+        transform:rotate(1.5deg) translate(-3px);
+    }
+    75%{
+        transform:rotate(-1.5deg) translate(3px);
+    }
+    100%{
+        transform:rotate(0deg) translate(0px);
+    }
+}
+@media all and (max-width: 1000px) {
+    @keyframes hero-anim { 
+        0%{
+            background-size: 100%;
+        }
+        20%{
+            background-position-y: 0px;
+            background-size: 120%
+        }
+        70%{
+            background-position-y: -200px;
+            background-size: 120%
+        }
+        100%{
+            background-position-y: center;
+            background-size: 100%;
+        }
+    }
+}
+@keyframes hero-anim { 
+    0%{
+        background-size: 100%;
+    }
+    20%{
+        background-position-y: 0px;
+        background-size: 120%
+    }
+    70%{
+        background-position-y: -100px;
+        background-size: 120%
+    }
+    100%{
+        background-position-y: center;
+        background-size: 100%;
+    }
+}

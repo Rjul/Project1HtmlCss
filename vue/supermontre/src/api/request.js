@@ -2,7 +2,7 @@
 export default {
     async getProducts() {
         function getDataProducts() {
-            return fetch("http://localhost/api/products", {
+            return fetch("http://api.hummel-dev.fr/api/products", {
                 method: "GET",
             })
                 .then(function (response) {

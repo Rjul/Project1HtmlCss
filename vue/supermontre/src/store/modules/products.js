@@ -18,7 +18,6 @@ const getters = {
         const dataMounted = state.dataMounted
         return dataMounted;
     }
-
 }
 
 // actions
@@ -61,7 +60,7 @@ const mutations = {
         state.idViewProduct = idToView;
     },
 
-    setDataMounted(stata, dataMounted) {
+    setDataMounted(state, dataMounted) {
         state.dataMounted = dataMounted
     }
 }

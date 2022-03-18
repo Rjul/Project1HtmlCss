@@ -109,7 +109,7 @@ export default {
   align-items: center;
   margin: 30px;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 600px) {
   .ficheList {
     width: 90vw;
     height: auto;

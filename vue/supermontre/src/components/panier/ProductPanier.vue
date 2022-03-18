@@ -7,7 +7,6 @@
         <span>{{ price }}$</span>
       </div>
       <span class="description">{{ description }} </span>
-      <span class="delete-container"> Supprimer </span>
       <span class="quantity-container">
         <div class="btn-container">
           <button @click="changeQuantity(-1)">-</button>
@@ -56,17 +55,22 @@ export default {
           quatityCart: this.qty,
           type: "math",
         });
-      }
-    },
-    changeQuantityRow: function (value) {
-      if (this.qty > 0) {
-        this.qty = value;
+      } else if ((this.qty >= 0) & (value == +1)) {
+        this.qty += value;
         this.$store.dispatch("cart/changeQuantity", {
           id: this.id,
           quatityCart: this.qty,
-          type: "row",
+          type: "math",
         });
       }
+    },
+    changeQuantityRow: function (value) {
+      this.qty = value;
+      this.$store.dispatch("cart/changeQuantity", {
+        id: this.id,
+        quatityCart: this.qty,
+        type: "row",
+      });
     },
   },
 

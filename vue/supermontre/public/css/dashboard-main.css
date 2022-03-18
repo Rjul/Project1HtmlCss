@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#app{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    overflow-x: hidden;
+}
+header{
+    position: fixed;
+    height: 100vh;
+    width: 150px;
+    padding-top: 10vh;
+    background-color: rgb(14, 88, 138);
+    z-index: 1;
+}
+header > nav{
+    padding-right: 10px;
+
+}
+.btnNav{
+    font-style: normal;
+    transition: 1s;
+    padding: 13px;
+    /* border: coral 1px solid; */
+    border-radius: 10px;
+    color:rgb(206, 206, 206);
+}
+.btnNav:hover{
+    background-color: rgba(190, 190, 190, 0.226);
+    margin: 15px 10px 15px 10px;  
+}
+.btnMenu{
+    position: fixed;
+    top: 2px;
+    left: 2px;
+    width: 35px;
+    padding: 3px;
+    background-color: rgba(0, 247, 255, 0.719);
+    border:rgb(206, 206, 206) 2px solid;
+    border-radius: 10px;
+    z-index: 1;
+    text-align: center;
+}
+#container{
+    display: flex;
+    position: relative;
+    width: calc(100vw - 150px);
+    left: 150px;
+    flex-direction: row;
+
+}
+canvas{
+    box-sizing: inherit;
+    width: 80%;
+    margin: 5px;
+}
+@media all and (max-width: 600px) {
+    #container{
+        flex-direction: column;
+    }
+}
+    

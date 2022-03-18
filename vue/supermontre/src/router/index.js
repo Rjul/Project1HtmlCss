@@ -14,7 +14,7 @@ const routes = [
   },
   {
     path: '/panier',
-    name: 'panier',
+    name: 'Panier',
 
     component: () => import('../views/Panier.vue')
   },

@@ -1,17 +1,17 @@
 <template>
   <div class="panier">
-    <Panier msg="Yours are incredible!" />
+    <PanierComponent msg="Yours are incredible!" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Panier from "@/components/panier/Panier.vue";
+import PanierComponent from "@/components/panier/PanierComponent.vue";
 
 export default {
-  name: "Home",
+  name: "Panier",
   components: {
-    Panier,
+    PanierComponent,
   },
 };
 </script>
