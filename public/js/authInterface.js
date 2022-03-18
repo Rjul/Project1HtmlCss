@@ -71,10 +71,10 @@ window.addEventListener('load', (e) => {
 })
 
 window.addEventListener('resize', (e) => {
-    if (e.target.innerWidth > 800) {
+    if (e.target.innerWidth > 600) {
         displayFullAuth()
     }
-    else if (e.target.innerWidth < 800) {
+    else if (e.target.innerWidth < 600) {
         tabSwitchDisplay('flex')
         if (states == 'connection') {
             inscriptionElm.style.display = 'none'
